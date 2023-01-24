@@ -59,12 +59,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function PrimarySearchAppBar({ liftTheState }) {
+export default function PrimarySearchAppBar() {
   const [text, setText] = useState("");
   const handleChange = (e) => {
     setText(e.target.value);
   };
-  liftTheState(text);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 

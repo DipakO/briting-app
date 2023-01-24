@@ -1,9 +1,11 @@
 import Box from "@mui/material/Box";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import "./music.css";
+import "../MusicCard/music.css";
 import { useParams } from "react-router-dom";
-import { useGetBrithingDataQuery } from "../service";
+// import path from '../../public/Asset/'
+import img from "../images/breth.jpg";
+import { useGetBrithingDataQuery } from "../service/Api";
 
 export default function MediaControlCard() {
   const { data, isLoading } = useGetBrithingDataQuery();
@@ -34,9 +36,10 @@ export default function MediaControlCard() {
             </CardContent>
           </Box>
           {filt.map((item, i) => {
+            console.log(item.image);
             return (
               <div key={i}>
-                <img className="img" src={item.pic} alt="nature" />
+                <img className="img" src={item.image} alt="nature" />
                 <p className="title">title : {item.title}</p>
               </div>
             );

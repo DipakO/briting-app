@@ -1,24 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import ActionAreaCard from "./Card";
 import Timing from "../Timing/Timing";
-import PrimarySearchAppBar from "./Navbar";
-import { useGetBrithingDataQuery } from "../service";
+import { useGetBrithingDataQuery } from "../service/Api";
 import NavBar2 from "./NavBar2";
+import PrimarySearchAppBar from "./Navbar";
 
-const Homepage = () => {
+const Homepage = ({ searchText }) => {
   const { data, isLoading } = useGetBrithingDataQuery();
-  const [searchText, setSearchText] = useState("");
-  const liftTheState = (text) => {
-    setSearchText(text);
-  };
 
   return (
     <>
       <div>
-        <PrimarySearchAppBar liftTheState={liftTheState} />
+        <PrimarySearchAppBar />
+        <NavBar2 />
         <Timing />
         <br />
-        <NavBar2 />
         <div
           style={{
             marginBottom: "10px",
@@ -34,7 +30,7 @@ const Homepage = () => {
             <h1>Loading...</h1>
           ) : (
             data
-              .filter((row) => {
+              ?.filter((row) => {
                 if (searchText === "") {
                   return row;
                 } else if (

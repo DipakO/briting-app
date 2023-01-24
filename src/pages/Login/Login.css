@@ -1,0 +1,44 @@
+.LoginFormContainer{
+    width: 30%;
+    box-shadow: 2px 2px 2px 2px gray;
+    padding: 2rem;
+    backdrop-filter: saturate(180%) blur(15px);
+    border-radius: 10px;
+  
+    min-height: 90vh;
+}
+
+.mainInLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+}
+
+.imgInLogin{
+    width: 100%; 
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 7rem;
+}
+
+input{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.Links{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: bold;
+}

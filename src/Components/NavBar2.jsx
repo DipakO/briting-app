@@ -9,6 +9,14 @@ const NavBar2 = () => {
   const handleRealaxationClick = () => {
     Navigate("/Realaxation");
   };
+
+  const handleMusicClick = () => {
+    Navigate("/music");
+  };
+
+  const handleSleepClick = () => {
+    Navigate("/sleep");
+  };
   return (
     <div>
       <div
@@ -26,8 +34,12 @@ const NavBar2 = () => {
         <p onClick={handleRealaxationClick} style={{ cursor: "pointer" }}>
           Relaxation
         </p>
-        <p style={{ cursor: "pointer" }}>Music</p>
-        <p style={{ cursor: "pointer" }}>Sleep </p>
+        <p onClick={handleMusicClick} style={{ cursor: "pointer" }}>
+          Music
+        </p>
+        <p onClick={handleSleepClick} style={{ cursor: "pointer" }}>
+          Sleep{" "}
+        </p>
       </div>
     </div>
   );

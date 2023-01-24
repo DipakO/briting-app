@@ -2,22 +2,21 @@ const List = [
   {
     id: 1,
     image: "./images/mad1.webp",
-    image: "./images/mad1.webp",
     pic: "../images/mad1.webp",
     title: "Basics",
     name: "Dipak",
     music_1: [
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
     ],
   },
@@ -29,16 +28,16 @@ const List = [
     name: "Dipak",
     music_1: [
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
     ],
   },
@@ -51,16 +50,16 @@ const List = [
     name: "Dipak",
     music_1: [
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
     ],
   },
@@ -72,16 +71,16 @@ const List = [
     name: "Dipak",
     music_1: [
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
     ],
   },
@@ -94,16 +93,16 @@ const List = [
     name: "Dipak",
     music_1: [
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
     ],
   },
@@ -115,16 +114,16 @@ const List = [
     name: "Dipak",
     music_1: [
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
     ],
   },
@@ -136,16 +135,16 @@ const List = [
     name: "Dipak",
     music_1: [
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
     ],
   },
@@ -157,16 +156,16 @@ const List = [
     name: "Dipak",
     music_1: [
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
       {
-        music: "../Asset/my-life-main-6670.ogg",
+        music: "../../public/Asset/my-life-main-6670.ogg",
       },
     ],
   },

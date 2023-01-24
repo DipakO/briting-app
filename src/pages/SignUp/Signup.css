@@ -1,0 +1,19 @@
+.formContainer{
+    width: 30%;
+    box-shadow: 0px 0px 0px 2px gray;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 2;
+    backdrop-filter: saturate(180%) blur(15px);
+}
+
+.formMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('https://thumbs.dreamstime.com/b/word-relax-beach-9360664.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
