@@ -4,7 +4,10 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-
+import { useGetLoggedUserQuery } from "../service/Api";
+import { getToken } from "../service/LocalStorageService";
+import { useState } from "react";
+import { useEffect } from "react";
 export default function ActionAreaCard({ elem }) {
   const Navigate = useNavigate();
 
@@ -12,6 +15,14 @@ export default function ActionAreaCard({ elem }) {
     Navigate(`./details/${elem.id}`);
   };
 
+  const token = getToken();
+  const { data, isSuccess } = useGetLoggedUserQuery(token);
+  const [userName, setUserName] = useState("Dipak");
+  useEffect(() => {
+    if (data && isSuccess) {
+      setUserName(data.user.name);
+    }
+  }, [data, isSuccess]);
   return (
     <div>
       <div className="main_card">
@@ -37,7 +48,7 @@ export default function ActionAreaCard({ elem }) {
                 {elem.title}
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                {elem.name}
+                {userName}
               </Typography>
             </CardContent>
           </CardActionArea>

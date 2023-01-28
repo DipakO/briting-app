@@ -9,6 +9,8 @@ import Details from "../Components/Details";
 import Music from "../MusicCard/Music";
 import UserLogin from "./Login/Login";
 import Registration from "./SignUp/SignUp";
+import Profile from "../Components/Profile";
+import ChangePassword from "./ChangePassword";
 
 const Routing = () => {
   const [searchText, setSearchText] = useState("");
@@ -26,6 +28,8 @@ const Routing = () => {
           <Route path="/" element={<Registration />} />
           <Route path="/login" element={<UserLogin />} />
           <Route path="/sleep" element={<Sleep />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/changepassword" element={<ChangePassword />} />
         </Routes>
       </Router>
     </div>

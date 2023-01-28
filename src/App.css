@@ -30,8 +30,7 @@
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
+        
         width: 88%;
         box-sizing: border-box;
         -webkit-flex-shrink: 0;

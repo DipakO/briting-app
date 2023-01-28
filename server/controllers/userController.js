@@ -65,28 +65,28 @@ class UserController {
               { expiresIn: "5d" }
             );
             res.send({
-              "status ": "success",
+              status: "success",
               message: "Login Success",
               token: token,
             });
           } else {
             res.send({
-              "status ": "failed",
+              status: "failed",
               message: "Email or password not valid",
             });
           }
         } else {
           res.send({
-            "status ": "failed",
+            status: "failed",
             message: "Yor are not a registered User",
           });
         }
       } else {
-        res.send({ "status ": "failed", message: "All feilds are required" });
+        res.send({ status: "failed", message: "All feilds are required" });
       }
     } catch (error) {
       console.log(error);
-      res.send({ "status ": "failed", message: "Unable to login" });
+      res.send({ status: "failed", message: "Unable to login" });
     }
   };
 
@@ -95,7 +95,7 @@ class UserController {
     if (password && password_confirmation) {
       if (password !== password_confirmation) {
         res.send({
-          "status ": "failed",
+          status: "failed",
           message: "Password and confirm password are not equal",
         });
       } else {
@@ -108,12 +108,12 @@ class UserController {
           },
         });
         res.send({
-          "status ": "success",
+          status: "success",
           message: "Password change succsfully",
         });
       }
     } else {
-      res.send({ "status ": "failed", message: "All feilds are required" });
+      res.send({ status: "failed", message: "All feilds are required" });
     }
   };
   static loggedUser = async (req, res) => {

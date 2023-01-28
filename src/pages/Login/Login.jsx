@@ -3,6 +3,10 @@ import { useEffect, useState } from "react";
 import "./Login.css";
 import relax from "../../images/relax2.png";
 import { Link, useNavigate } from "react-router-dom";
+import { useLoginUserMutation } from "../../service/Api";
+import { useDispatch } from "react-redux";
+import { getToken, storeToken } from "../../service/LocalStorageService";
+import { setUserToken } from "../../features/authSlice";
 
 const UserLogin = () => {
   const Navigate = useNavigate();
@@ -11,6 +15,7 @@ const UserLogin = () => {
     msg: "",
     type: "",
   });
+  const [loginUser, { isLoading }] = useLoginUserMutation();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
@@ -18,28 +23,28 @@ const UserLogin = () => {
       email: data.get("email"),
       password: data.get("password"),
     };
-    Navigate("/Home");
-    //     if (actualData.email && actualData.password) {
-    //       const res = await loginUser(actualData);
+    // Navigate("/Home");
+    if (actualData.email && actualData.password) {
+      const res = await loginUser(actualData);
 
-    //       if (res.data.token) {
-    //         storeToken(res.data.token);
+      if (res.data.token) {
+        storeToken(res.data.token);
 
-    //         navigate("/dashboard");
-    //       }
-    //       if (res.data.status === "failed") {
-    //         setError({ status: true, msg: res.data.message, type: "error" });
-    //       }
-    //     } else {
-    //       setError({ status: true, msg: "All Fields are Required", type: "error" });
-    //     }
+        Navigate("/Home");
+      }
+      if (res.data.status === "failed") {
+        setError({ status: true, msg: res.data.message, type: "error" });
+      }
+    } else {
+      setError({ status: true, msg: "All Fields are Required", type: "error" });
+    }
   };
 
-  //   let token = getToken("token");
-  //   const dispatch = useDispatch();
-  //   useEffect(() => {
-  //     dispatch(setUserToken({ token: token }));
-  //   }, [token, dispatch]);
+  let token = getToken("token");
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(setUserToken({ token: token }));
+  }, [token, dispatch]);
 
   return (
     <>
@@ -51,6 +56,7 @@ const UserLogin = () => {
             sx={{ mt: 1 }}
             id="login-form"
             onSubmit={handleSubmit}
+            className="boxInLogin"
           >
             <img className="imgInLogin" src={relax} alt="relax" />
             <div className="input">
@@ -89,13 +95,13 @@ const UserLogin = () => {
                 <Link to="/">Sing Up </Link>
               </div>
             </div>
-            {/* {error.status ? (
-          <Alert severity={error.type} sx={{ mt: 3 }}>
-            {error.msg}
-          </Alert>
-        ) : (
-          ""
-        )} */}
+            {error.status ? (
+              <Alert severity={error.type} sx={{ mt: 3 }}>
+                {error.msg}
+              </Alert>
+            ) : (
+              ""
+            )}
           </Box>
         </div>
       </div>

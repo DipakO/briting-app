@@ -18,7 +18,7 @@ const Registration = () => {
     type: "",
   });
   const Navigate = useNavigate();
-  const [registerUser, { isLoading }] = useRegisterUserMutation();
+  const [registerUser] = useRegisterUserMutation();
   const [once, setOnce] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -70,6 +70,7 @@ const Registration = () => {
             sx={{ mt: 1 }}
             id="registration-form"
             onSubmit={handleSubmit}
+            className="box"
           >
             <TextField
               margin="normal"
@@ -115,16 +116,20 @@ const Registration = () => {
               <Button
                 type="submit"
                 variant="contained"
-                sx={{ mt: 3, mb: 2, px: 5 }}
+                // sx={{ mt: 3, mb: 2, px: 5 }}
                 onClick={() => setOnce(true)}
               >
                 Sign In
               </Button>
             </Box>
-            {/* {error.status ? <Alert severity={error.type}>{error.msg}</Alert> : ""} */}
+            {error.status ? (
+              <Alert severity={error.type}>{error.msg}</Alert>
+            ) : (
+              ""
+            )}
           </Box>
-          <small>Already have a account </small>
-          <Link to="/login">Log in</Link>
+
+          <Link to="/login"> Already have a account.? Log in</Link>
         </div>
       </div>
     </>

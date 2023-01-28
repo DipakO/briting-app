@@ -1,5 +1,6 @@
 .formContainer{
     width: 30%;
+    /* display: flex; */
     box-shadow: 0px 0px 0px 2px gray;
     padding: 20px;
     border-radius: 10px;
@@ -11,9 +12,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     background-image: url('https://thumbs.dreamstime.com/b/word-relax-beach-9360664.jpg');
     background-repeat: no-repeat;
-    background-size: 100vw;
+    background-size: cover;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1000px) {
+.formContainer{
+    width: 90%;
+}
 }
 
